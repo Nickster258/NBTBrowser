@@ -16,4 +16,7 @@ To use NBTBrowser, start it by running the following with the specified NBT file
 - `ll` - Get a tabulated list of tags and types.
 - `cat` - Print the contents of a tag.
 - `rm` - Remove a tag.
+- `add` - Add NBT data with a specified string `add [tag] [data]`.
+- `set` - Set NBT data, overriding an existing tag `set [tag] [data]`.
+- `tree` - Print a tree representation of the current node.
 - `save` - Write your changes back to the file.
