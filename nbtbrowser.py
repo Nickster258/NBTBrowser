@@ -16,5 +16,4 @@ def main():
     NbtPrompt(args.file).cmdloop()
 
 
-if __name__ == "__main__":
-    main()
+main()
