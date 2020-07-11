@@ -223,7 +223,3 @@ def main():
         exit(1)
 
     NbtPrompt(args.file).cmdloop()
-
-
-if __name__ == '__main__':
-    main()
