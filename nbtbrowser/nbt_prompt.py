@@ -1,6 +1,6 @@
 from cmd import Cmd
 
-from nbt_manager import NbtManager
+from nbtbrowser.nbt_manager import NbtManager
 
 
 class NbtPrompt(Cmd):

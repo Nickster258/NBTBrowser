@@ -1,7 +1,7 @@
 import nbtlib
 from tabulate import tabulate
 
-from util import items
+from nbtbrowser.util import items
 
 
 class NbtManager:
