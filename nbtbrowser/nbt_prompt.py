@@ -1,4 +1,6 @@
+import argparse
 import cmd
+import os
 
 import nbtlib
 
@@ -73,3 +75,15 @@ class NbtPrompt(cmd.Cmd):
         if len(self.manager.placement) > 0:
             key = self.manager.placement[-1]
         self.manager.tree(self.manager.current_node(), key, "")
+
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--file', '-f', metavar='file', type=str, required=True)
+    args = parser.parse_args()
+
+    if not os.path.exists(args.file):
+        print(f"File '{args.file}' does not appear to exist")
+        exit(1)
+
+    NbtPrompt(args.file).cmdloop()

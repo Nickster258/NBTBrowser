@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
     name="nbtbrowser",
-    version="0.0.1",
+    version="1",
     author="Nicholas Stonecipher",
     author_email="nickster258@users.noreply.github.com",
     packages=['nbtbrowser'],

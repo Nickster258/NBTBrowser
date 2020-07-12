@@ -44,6 +44,8 @@ class NbtManager:
     def change_directory(self, key):
         current_node = self.current_node()
         if key == "..":
+            if len(self.placement) == 0:
+                raise NavigationError(f"Already in root")
             if self.placement:
                 self.placement.pop()
         elif key in self.get_keys(current_node):
