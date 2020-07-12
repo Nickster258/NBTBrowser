@@ -5,14 +5,14 @@ setup(
     version="0.0.1",
     author="Nicholas Stonecipher",
     author_email="nickster258@users.noreply.github.com",
-    py_modules=['nbtbrowser'],
+    packages=['nbtbrowser'],
     install_requires=[
-        'Click',
         'nbtlib~=1.7.0',
         'tabulate~=0.8.7'
     ],
-    entry_points='''
-        [console_scripts]
-        nbtbrowser=nbtbrowser:main
-    '''
+    entry_points={
+        'console_scripts': [
+            'nbtbrowser=nbtbrowser.__main__:main'
+        ]
+    }
 )
