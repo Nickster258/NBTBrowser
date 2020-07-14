@@ -43,6 +43,8 @@ The `rm` command supports two types of arguments: a `key`, and `index`.
 To remove a tag, use its key: `rm someKey`
 
 To remove a tag within a list, use its index: `rm 1`
+#### `size` - Print the size (in bytes) of the specified element within your current placement
+#### `sizes` - Print the sizes (in bytes) of the elements in your current placement
 #### `set` - Set NBT data, overriding an existing tag.
 The `set` command lets you set the contents of a tag using a serialized representation of NBT data. This command strictly overrides existing tags.
 

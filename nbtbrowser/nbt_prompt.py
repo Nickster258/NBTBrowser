@@ -70,6 +70,12 @@ class NbtPrompt(cmd.Cmd):
     def do_set(self, inp):
         self.manager.set(inp)
 
+    def do_sizes(self, inp):
+        print(self.manager.sizes())
+
+    def do_size(self, inp):
+        print(self.manager.size(inp))
+
     def do_tree(self, inp):
         key = "Root"
         if len(self.manager.placement) > 0:

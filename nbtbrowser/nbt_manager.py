@@ -1,4 +1,5 @@
 import nbtlib
+import sys
 from tabulate import tabulate
 
 from nbtbrowser.util import items
@@ -133,3 +134,22 @@ class NbtManager:
                     self.tree(node[subkey], subkey, spacing)
         else:
             print(f"{spacing}{key} - {type(node).__name__}")
+
+    def size(self, key):
+        current_node = self.current_node()
+        if key == '' or key == '.':
+            print(sys.getsizeof(current_node))
+        elif isinstance(current_node, nbtlib.List):
+            try:
+                print(sys.getsizeof(current_node[int(key)]))
+            except ValueError:
+                raise ValueError(f"'{key}'")
+        else:
+            return sys.getsizeof(current_node[key])
+
+    def sizes(self):
+        current_node = self.current_node()
+        keys = self.get_keys(current_node)
+        entries = [[key, self.size(key)] for key in keys]
+        return tabulate(entries, headers=['Key', 'Size'])
+
